@@ -1,5 +1,3 @@
-![SaifulNB](img/github-header-image.png)
-
 # SNBJavaClass
 Kelas Kuliah Pemrograman Berorientasi Object menggunakan JAVA
 
