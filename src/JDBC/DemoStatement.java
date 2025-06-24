@@ -65,11 +65,11 @@ public class DemoStatement {
 //                  int update = stmt.executeUpdate(updateSQL);
 //                  System.out.println(update+" baris berhasil diupdate");
 
-//                    //delete data
-//                    String deleteSQL = "delete from mahasiswa where "
-//                            + "nim = '2025010'";
-//                    int delete = stmt.executeUpdate(deleteSQL);
-//                    System.out.println(delete+" baris berhasil dihapus");
+                    //delete data
+                    String deleteSQL = "delete from mahasiswa where "
+                            + "nim = '2025010'";
+                    int delete = stmt.executeUpdate(deleteSQL);
+                    System.out.println(delete+" baris berhasil dihapus");
                     
             }
             
