@@ -16,7 +16,7 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
-package JDBC;
+package w15_jdbc;
 
 import java.sql.Connection;
 import java.sql.Statement;
@@ -41,14 +41,35 @@ public class DemoStatement {
             if(conn != null){
                 stmt = conn.createStatement();
                 
-                //insert data
-                String insertSQL = "insert into mahasiswa "
-                        + "(nim, nama, jurusan, angkatan) "
-                        + "values ('2025010', 'Luffy', 'Teknik Informatika', 2025)";
-                int baru = stmt.executeUpdate(insertSQL);
-                System.out.println(baru+" baris berhasil ditambahkan");
+//                //insert data
+//                String insertSQL = "insert into mahasiswa "
+//                        + "(nim, nama, jurusan, angkatan) "
+//                        + "values ('2025010', 'Luffy', 'Teknik Informatika', 2025)";
+//                int baru = stmt.executeUpdate(insertSQL);
+//                System.out.println(baru+" baris berhasil ditambahkan");
                 
+//                //select data
+//                String selectSQL = "select * from mahasiswa";
+//                rs = stmt.executeQuery(selectSQL);
+//                while(rs.next()){
+//                    System.out.println("NIM = "+rs.getString("nim"));
+//                    System.out.println("Nama = "+rs.getString("nama"));
+//                    System.out.println("Jurusan = "+rs.getString("jurusan"));
+//                    System.out.println("Angkatan = "+rs.getInt("angkatan"));
+//                    System.out.println("=================================");
+//                }
 
+//                  //update data
+//                  String updateSQL = "update mahasiswa set jurusan = 'Magang' "
+//                          + "where nim = '2025010'";
+//                  int update = stmt.executeUpdate(updateSQL);
+//                  System.out.println(update+" baris berhasil diupdate");
+
+//                    //delete data
+//                    String deleteSQL = "delete from mahasiswa where "
+//                            + "nim = '2025010'";
+//                    int delete = stmt.executeUpdate(deleteSQL);
+//                    System.out.println(delete+" baris berhasil dihapus");
                     
             }
             

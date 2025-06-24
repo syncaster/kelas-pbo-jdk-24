@@ -16,7 +16,7 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
-package JDBC;
+package w15_jdbc;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -45,8 +45,10 @@ public class DemoPreparedStatement {
                         + "(nim, nama, jurusan, angkatan) "
                         + "values (?, ?, ?, ?)";
                 pstmt = conn.prepareStatement(insertSQL);
-                pstmt.setString(1, " ");
-				//lanjutkan
+                pstmt.setString(1, "2025012");
+                pstmt.setString(2, "Hulk");
+                pstmt.setString(3, "Kimia");
+                pstmt.setInt(4, 2025);
                 int baru = pstmt.executeUpdate();
                 System.out.println(baru+" baris berhasil ditambahkan");
                 
