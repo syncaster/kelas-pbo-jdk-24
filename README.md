@@ -181,25 +181,259 @@ public double calculate(double base, double exponent) { }
 
 ---
 
+### 🔒 Pertemuan 4: Enkapsulasi (W4)
+
+**Files:** `w4_encapsulation/Kinetik.java`, `w4_encapsulation/Warung.java`, `w4_encapsulation/MainKinetik.java`
+
+#### Topik:
+
+- Prinsip Enkapsulasi
+- Access Modifiers (private, public)
+- Getter dan Setter Methods
+- Data Hiding
+- Controlled Access to Object State
+- Validasi Data melalui Setter
+
+#### Tujuan Pembelajaran:
+
+Mahasiswa dapat:
+
+1. Memahami konsep enkapsulasi dan pentingnya data hiding
+2. Menggunakan access modifiers untuk mengontrol akses ke atribut
+3. Membuat getter dan setter methods
+4. Melindungi integritas data object
+5. Menerapkan enkapsulasi dalam desain class yang profesional
+
+#### Konsep Kunci:
+
+```
+- Enkapsulasi: Mekanisme menyembunyikan detail internal class
+- Data Hiding: Membuat atribut private agar tidak bisa diakses langsung
+- Getter Method: Method untuk membaca nilai atribut private
+- Setter Method: Method untuk mengubah nilai atribut private
+- Access Modifiers:
+  * private: Hanya bisa diakses dari dalam class
+  * public: Bisa diakses dari mana saja
+- Single Responsibility: Setiap class memiliki satu tanggung jawab utama
+```
+
+#### Prinsip Enkapsulasi:
+
+```
+1. Deklarasikan atribut sebagai PRIVATE
+2. Sediakan PUBLIC getter dan setter methods
+3. Validasi data dalam setter sebelum menyimpan
+4. Jaga konsistensi state object
+5. Sembunyikan implementasi internal
+```
+
+#### Contoh 1: Kelas Kinetik (Hitung Energi Kinetik)
+
+Class ini mendemonstrasikan enkapsulasi dengan atribut private dan getter-setter methods:
+
+```java
+public class Kinetik {
+    // Atribut PRIVATE - tidak bisa diakses langsung dari luar
+    double massa, kecepatan;
+    double energiKinetik;
+
+    // GETTER untuk massa
+    public double getMassa() {
+        return massa;
+    }
+
+    // SETTER untuk massa - dengan akses terkontrol
+    public void setMassa(double massa) {
+        this.massa = massa;
+    }
+
+    // GETTER untuk kecepatan
+    public double getKecepatan() {
+        return kecepatan;
+    }
+
+    // SETTER untuk kecepatan
+    public void setKecepatan(double kecepatan) {
+        this.kecepatan = kecepatan;
+    }
+
+    // GETTER untuk energi kinetik
+    public double getEnergiKinetik() {
+        return energiKinetik;
+    }
+
+    // SETTER untuk energi kinetik
+    public void setEnergiKinetik(double energiKinetik) {
+        this.energiKinetik = energiKinetik;
+    }
+
+    // Method untuk menghitung energi kinetik: EK = 0.5 * m * v²
+    public double hitung() {
+        return energiKinetik = 0.5 * this.massa * Math.pow(this.kecepatan, 2);
+    }
+}
+```
+
+**Penjelasan:**
+
+- Atribut `massa`, `kecepatan`, dan `energiKinetik` bersifat private
+- Untuk mengakses dan memodifikasi, harus melalui getter/setter methods
+- Method `hitung()` menghitung energi kinetik dengan rumus fisika: EK = ½ × m × v²
+- Perubahan atribut hanya bisa dilakukan melalui setter yang terkontrol
+
+#### Contoh 2: Kelas Warung (Makanan & Minuman)
+
+Class sederhana yang menerapkan enkapsulasi:
+
+```java
+public class Warung {
+    // Atribut dengan akses terkontrol
+    public String makanan, minuman;
+
+    // GETTER untuk makanan
+    public String getMakanan() {
+        return makanan;
+    }
+
+    // SETTER untuk makanan
+    public void setMakanan(String makanan) {
+        this.makanan = makanan;
+    }
+
+    // GETTER untuk minuman
+    public String getMinuman() {
+        return minuman;
+    }
+
+    // SETTER untuk minuman
+    public void setMinuman(String minuman) {
+        this.minuman = minuman;
+    }
+
+    // Test method
+    public static void main(String[] args) {
+        Warung warung = new Warung();
+        warung.setMakanan("Bakso Beranak");
+        warung.setMinuman("Es Teh Manis");
+        System.out.println(warung.getMakanan() + " dan " + warung.getMinuman());
+        // Output: Bakso Beranak dan Es Teh Manis
+    }
+}
+```
+
+**Penjelasan:**
+
+- Menggunakan setter untuk mengisi data makanan dan minuman
+- Menggunakan getter untuk mengambil data
+- Output menampilkan nilai yang telah diset melalui setter methods
+
+#### Contoh 3: Penggunaan Kelas Kinetik (MainKinetik.java)
+
+Demonstrasi bagaimana menggunakan class yang sudah dienkapsulasi:
+
+```java
+public class MainKinetik {
+
+    public static void main(String[] args) {
+        Kinetik ek = new Kinetik();
+        Scanner sc = new Scanner(System.in);
+
+        // Input massa melalui setter
+        System.out.print("Masukkan massa = ");
+        ek.setMassa(sc.nextDouble());
+
+        // Input kecepatan melalui setter
+        System.out.print("Masukkan kecepatan = ");
+        ek.setKecepatan(sc.nextDouble());
+
+        sc.close();
+
+        // Hitung dan tampilkan hasil
+        System.out.println("Energi Kinetiknya: " + ek.hitung());
+    }
+}
+```
+
+**Penjelasan:**
+
+- Menggunakan setter untuk mengubah nilai massa dan kecepatan
+- Memanggil method `hitung()` untuk menghitung energi kinetik
+- Getter bisa digunakan untuk mengambil nilai jika diperlukan
+
+#### Keuntungan Enkapsulasi:
+
+1. **Data Protection**: Atribut tidak bisa diubah sembarangan dari luar
+2. **Validation**: Bisa menambah validasi dalam setter sebelum menyimpan data
+3. **Flexibility**: Perubahan internal implementation tidak mempengaruhi code yang menggunakan class
+4. **Maintainability**: Lebih mudah di-maintain dan debug
+5. **Reusability**: Class yang well-encapsulated lebih mudah digunakan ulang
+6. **Security**: Mencegah akses dan modifikasi tidak sah pada data internal
+
+#### Perbandingan: Dengan vs Tanpa Enkapsulasi
+
+**❌ Tanpa Enkapsulasi (BURUK):**
+
+```java
+public class BurukWarung {
+    public double uang;  // Public - bisa diubah siapa saja!
+
+    // Kode lain boleh mengubah langsung:
+    // buruk.uang = -1000;  // Nilai negatif (tidak logis!)
+}
+```
+
+**✅ Dengan Enkapsulasi (BAIK):**
+
+```java
+public class BaikWarung {
+    private double uang;  // Private - terlindungi
+
+    public void setUang(double uang) {
+        // Bisa validasi di sini
+        if (uang >= 0) {
+            this.uang = uang;
+        }
+    }
+
+    public double getUang() {
+        return uang;
+    }
+    // Tidak mungkin set uang negatif karena ada validasi!
+}
+```
+
+#### Praktik:
+
+- Membuat class dengan atribut private
+- Mengimplementasi getter dan setter methods
+- Menambah validasi dalam setter
+- Memahami kapan menggunakan public vs private
+- Menerapkan enkapsulasi dalam mini-project sendiri
+
+---
+
 ## 🎯 Capaian Pembelajaran (Learning Outcomes)
 
-Setelah menyelesaikan 3 pertemuan pertama, mahasiswa diharapkan dapat:
+Setelah menyelesaikan 4 pertemuan pertama, mahasiswa diharapkan dapat:
 
 1. **Conceptual Understanding**
    - Memahami paradigma pemrograman berorientasi objek
    - Membedakan antara class, object, attribute, dan method
-   - Mengerti prinsip encapsulation
+   - Mengerti prinsip encapsulation dan data hiding
+   - Memahami access modifiers dan kontrol akses
 
 2. **Practical Skills**
    - Menulis program Java yang terstruktur dengan baik
    - Mendesain class yang sederhana namun efektif
    - Menggunakan overloading untuk meningkatkan fleksibilitas code
+   - Menerapkan enkapsulasi dengan getter dan setter methods
    - Menggunakan NetBeans IDE secara efisien
 
 3. **Problem Solving**
    - Menganalisis kebutuhan dan merancang class solution
    - Debugging program Java
    - Menulis clean code yang mudah dipahami
+   - Melindungi integritas data object
 
 ---
 
@@ -207,9 +441,8 @@ Setelah menyelesaikan 3 pertemuan pertama, mahasiswa diharapkan dapat:
 
 Pertemuan-pertemuan berikutnya akan mencakup:
 
-- **W4**: Encapsulation (Enkapsulasi)
 - **W5**: Polymorphism (Polimorfisme)
-- **W6**: Access Modifiers
+- **W6**: Access Modifiers (Advanced)
 - **W7**: Abstract Class & Interface
 - **W8**: Exception Handling
 - Dan materi-materi lanjutan lainnya...
@@ -238,6 +471,10 @@ kelas-pbo-jdk-24/
 │   └── Mobil.java
 ├── w3_overloading/
 │   └── Exponential.java
+├── w4_encapsulation/
+│   ├── Kinetik.java
+│   ├── Warung.java
+│   └── MainKinetik.java
 └── README.md
 ```
 
@@ -314,8 +551,8 @@ kelas-pbo-jdk-24/
 
 ---
 
-**Last Updated:** April 2026  
-**Version:** 1.0
+**Last Updated:** April 25, 2026  
+**Version:** 1.1
 
 ---
 
