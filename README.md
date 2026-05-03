@@ -9,102 +9,57 @@
 
 ---
 
-## 📋 Daftar Pertemuan
+## 📋 Ringkasan Materi
 
-Kelas Pemrograman Berorientasi Objek ini dirancang untuk memberikan pemahaman mendalam tentang konsep-konsep fundamental OOP dalam Java. Berikut adalah materi yang disajikan dalam setiap pertemuan:
+Kelas Pemrograman Berorientasi Objek ini dirancang untuk memberikan pemahaman mendalam tentang konsep-konsep fundamental OOP dalam Java. Berikut adalah ringkasan materi yang disajikan dalam setiap pertemuan.
+
+**Untuk detail lengkap setiap pertemuan, silakan buka README.md di folder masing-masing.**
+
+---
+
+## 📚 Daftar Pertemuan
 
 ### ✨ Pertemuan 1: Hello World (W1)
 
-**File:** `w1_helloworld/HelloWorld.java`
+**📂 Folder:** `w1_helloworld/` | **📄 Detail:** [w1_helloworld/README.md](w1_helloworld/README.md)
 
-#### Topik:
+Perkenalan dengan Java dan membuat program pertama.
 
-- Pengenalan bahasa pemrograman Java
+**Topik Utama:**
+
 - Struktur dasar program Java
 - Class dan method main
-- Statement output (System.out.println)
+- Output dengan System.out.println()
 - Konsep kompilasi dan eksekusi
 
-#### Tujuan Pembelajaran:
-
-Mahasiswa dapat:
-
-1. Memahami struktur dasar program Java
-2. Membuat dan menjalankan program Java sederhana
-3. Menggunakan method println untuk output
-4. Memahami konsep package dan class
-
-#### Konsep Kunci:
-
-```
-- public class: Deklarasi class yang dapat diakses dari luar
-- public static void main(String[] args): Titik awal program
-- System.out.println(): Method untuk menampilkan output ke konsol
-```
-
-#### Praktik:
-
-- Membuat program Hello World pertama
-- Memahami pesan keluaran program
-- Menjalankan program dari IDE NetBeans
+**File:** `HelloWorld.java`
 
 ---
 
 ### 🔧 Pertemuan 2: Instansiasi Objek (W2)
 
-**File:** `w2_instansiasi/Mobil.java`
+**📂 Folder:** `w2_instansiasi/` | **📄 Detail:** [w2_instansiasi/README.md](w2_instansiasi/README.md)
 
-#### Topik:
+Konsep fundamental OOP: class, object, atribut, method, dan konstruktor.
 
-- Pengenalan Objek dan Kelas
-- Atribut (Properties/Variables)
-- Method (Behavior/Functions)
-- Konstruktor
-- Instansiasi Objek
-- Encapsulation
+**Topik Utama:**
 
-#### Tujuan Pembelajaran:
+- Class sebagai blueprint
+- Atribut (state) dan Method (behavior)
+- Konstruktor untuk inisialisasi
+- Instansiasi dengan keyword `new`
+- Akses data melalui object
 
-Mahasiswa dapat:
-
-1. Memahami perbedaan antara class dan object
-2. Mendeklarasikan atribut dan method dalam class
-3. Membuat konstruktor dengan parameter
-4. Membuat instance dari suatu class
-5. Mengakses atribut dan memanggil method dari object
-
-#### Konsep Kunci:
-
-```
-- Class: Blueprint atau template untuk membuat object
-- Object: Instance/wujud konkret dari sebuah class
-- Atribut: Data/state yang dimiliki object
-- Method: Perilaku/action yang dapat dilakukan object
-- Konstruktor: Method khusus untuk inisialisasi object
-- new Keyword: Digunakan untuk membuat instance object
-```
-
-#### Struktur Class Mobil:
-
-```java
-public class Mobil {
-    // Atribut
-    String merek;
-    String warna;
-    int tahun;
-
-    // Konstruktor
-    public Mobil(String merek, String warna, int tahun) {
-        this.merek = merek;
-        this.warna = warna;
-        this.tahun = tahun;
-    }
+**File:** `Mobil.java`
+}
 
     // Method
     public void tampilkanInfo() {
         // implementasi
     }
+
 }
+
 ```
 
 #### Praktik:
@@ -141,15 +96,17 @@ Mahasiswa dapat:
 #### Konsep Kunci:
 
 ```
+
 - Overloading: Memiliki lebih dari satu method dengan nama yang sama
   tetapi signature yang berbeda
 - Signature: Kombinasi dari nama method dan parameter list
 - Method Resolution: Proses untuk menentukan method mana yang dipanggil
 - Parameter dapat berbeda dalam:
-  * Jumlah parameter
-  * Tipe data parameter
-  * Urutan parameter
-```
+  - Jumlah parameter
+  - Tipe data parameter
+  - Urutan parameter
+
+````
 
 #### Contoh Overloading pada Exponential:
 
@@ -163,7 +120,7 @@ public Exponential(double base, int exponent) { }
 public double calculate(int exponent) { }
 public double calculate(double base, int exponent) { }
 public double calculate(double base, double exponent) { }
-```
+````
 
 #### Keuntungan Overloading:
 
