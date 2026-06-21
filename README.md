@@ -9,295 +9,84 @@
 
 ---
 
-## 📋 Ringkasan Materi
+## 📋 Ringkasan Singkat Materi (W1 - W14)
 
-Kelas Pemrograman Berorientasi Objek ini dirancang untuk memberikan pemahaman mendalam tentang konsep-konsep fundamental OOP dalam Java. Berikut adalah ringkasan materi yang disajikan dalam setiap pertemuan.
+Kelas Pemrograman Berorientasi Objek ini dirancang untuk memberikan pemahaman mendalam tentang konsep-konsep fundamental OOP dalam Java.
 
 **Untuk detail lengkap setiap pertemuan, silakan buka README.md di folder masing-masing.**
 
 ---
 
-## 📚 Daftar Pertemuan
+## 📚 Daftar Materi
 
-### ✨ Pertemuan 1: Hello World (W1)
-
-**📂 Folder:** `w1_helloworld/` | **📄 Detail:** [w1_helloworld/README.md](w1_helloworld/README.md)
-
-Perkenalan dengan Java dan membuat program pertama.
-
-**Topik Utama:**
-
-- Struktur dasar program Java
-- Class dan method main
-- Output dengan System.out.println()
-- Konsep kompilasi dan eksekusi
-
-**File:** `HelloWorld.java`
-
----
-
-### 🔧 Pertemuan 2: Instansiasi Objek (W2)
-
-**📂 Folder:** `w2_instansiasi/` | **📄 Detail:** [w2_instansiasi/README.md](w2_instansiasi/README.md)
-
-Konsep fundamental OOP: class, object, atribut, method, dan konstruktor.
-
-**Topik Utama:**
-
-- Class sebagai blueprint
-- Atribut (state) dan Method (behavior)
-- Konstruktor untuk inisialisasi
-- Instansiasi dengan keyword `new`
-- Akses data melalui object
-
-**File:** `Mobil.java`
-}
-
-    // Method
-    public void tampilkanInfo() {
-        // implementasi
-    }
-
-}
-
-```
-
-#### Praktik:
-
-- Merancang class dengan atribut dan method
-- Membuat konstruktor untuk inisialisasi
-- Membuat multiple objects dari class yang sama
-- Mengakses dan memanipulasi data object
+| #   | Minggu | Topik               | Pokok Bahasan                                                         | File Utama                                             |
+| --- | ------ | ------------------- | --------------------------------------------------------------------- | ------------------------------------------------------ |
+| 1   | W1     | Hello World         | Struktur dasar Java, class, method main, output                       | `HelloWorld.java`                                      |
+| 2   | W2     | Instansiasi Objek   | Class, object, atribut, method, konstruktor, keyword `new`            | `Mobil.java`                                           |
+| 3   | W3     | Overloading         | Method overloading, constructor overloading, polimorfisme             | `Exponential.java`                                     |
+| 4   | W4     | Enkapsulasi         | Access modifiers (private/public), getter/setter, data hiding         | `Kinetik.java`                                         |
+| 5   | W5     | Array of Object     | Array berisi object, deklarasi dan inisialisasi                       | `Laptop.java`, `MainLaptop.java`                       |
+| 6   | W6     | Inheritance Part 1  | Konsep inheritance, parent-child class, keyword `extends`, super()    | `Mamalia.java`, `Sapi.java`                            |
+| 7   | W7     | Inheritance Part 2  | Multi-level inheritance, interface, implementasi interface            | `MainMamalia.java`, `MainHitung.java`                  |
+| 8   | W8     | Method Overriding   | Override method dari parent, dynamic binding, late binding            | `Ayah.java`, `Anak.java`                               |
+| 9   | W9     | Final Keyword       | Final class, final method, final variable, immutability               | `PenggunaanFinalClass.java`                            |
+| 10  | W10    | Static Keyword      | Static method, static variable, class member vs instance member       | `MethodStatic.java`, `Buku.java`                       |
+| 11  | W11    | Polymorphism Part 1 | Dynamic binding, static binding, upcasting, compile-time polymorphism | `ContohStaicBinding.java`, `ContohDynamicBinding.java` |
+| 12  | W12    | Polymorphism Part 2 | Downcasting, instanceof, type casting, runtime polymorphism           | `TestDownCasting.java`, `TestAnimal.java`              |
+| 13  | W13    | Abstract Class      | Abstract class, abstract method, implementasi abstract                | `Hewan.java`, `Pegawai.java`                           |
+| 14  | W14    | JDBC                | Database connection, SQL query, Statement, PreparedStatement          | `DBConnection.java`, `DemoStatement.java`              |
 
 ---
 
-### ⚡ Pertemuan 3: Overloading (W3)
+## 🎯 Ringkasan Konsep Utama
 
-**File:** `w3_overloading/Exponential.java`
+### Fase 1: Fundamental (W1-W2)
 
-#### Topik:
+- Struktur program Java dan konsep dasar OOP
+- Class, object, atribut, method, konstruktor
 
-- Konsep Overloading
-- Method Overloading (Polimorfisme)
-- Constructor Overloading
-- Tipe Parameter yang Berbeda
-- Return Type yang Berbeda
+### Fase 2: Core OOP (W3-W5)
 
-#### Tujuan Pembelajaran:
+- Overloading untuk fleksibilitas method
+- Enkapsulasi untuk data protection
+- Koleksi object dalam array
 
-Mahasiswa dapat:
+### Fase 3: Inheritance & Reusability (W6-W7)
 
-1. Memahami konsep overloading dalam Java
-2. Membuat multiple method dengan nama sama tapi parameter berbeda
-3. Menerapkan constructor overloading
-4. Memahami method resolution dalam overloading
-5. Menggunakan overloading untuk membuat API yang flexible
+- Inheritance untuk code reuse
+- Hierarchi class dan interface implementation
+- Multi-level inheritance
 
-#### Konsep Kunci:
+### Fase 4: Advanced OOP (W8-W13)
 
-```
+- Method Overriding untuk behavior customization
+- Static & Final untuk control dan optimization
+- Polymorphism (compile-time & runtime)
+- Abstract class untuk abstraksi
 
-- Overloading: Memiliki lebih dari satu method dengan nama yang sama
-  tetapi signature yang berbeda
-- Signature: Kombinasi dari nama method dan parameter list
-- Method Resolution: Proses untuk menentukan method mana yang dipanggil
-- Parameter dapat berbeda dalam:
-  - Jumlah parameter
-  - Tipe data parameter
-  - Urutan parameter
+### Fase 5: Database Integration (W14)
 
-````
-
-#### Contoh Overloading pada Exponential:
-
-```java
-// Constructor Overloading
-public Exponential() { }
-public Exponential(double base) { }
-public Exponential(double base, int exponent) { }
-
-// Method Overloading
-public double calculate(int exponent) { }
-public double calculate(double base, int exponent) { }
-public double calculate(double base, double exponent) { }
-````
-
-#### Keuntungan Overloading:
-
-- **Readability**: Nama method yang sama lebih mudah diingat
-- **Flexibility**: Memungkinkan berbagai cara memanggil method
-- **Consistency**: Interface yang konsisten untuk operasi yang mirip
-- **Reusability**: Kode yang lebih reusable dan maintainable
-
-#### Praktik:
-
-- Mengidentifikasi kapan menggunakan overloading
-- Membuat method dengan berbagai parameter
-- Memahami error message saat terjadi ambiguity
-- Menggunakan overloading untuk operator seperti +, -, \*, /
+- JDBC untuk koneksi database
+- Eksekusi query dan data manipulation
 
 ---
 
-### 🔒 Pertemuan 4: Enkapsulasi (W4)
+## 🚀 Quick Start
 
-**Files:** `w4_encapsulation/Kinetik.java`, `w4_encapsulation/Warung.java`, `w4_encapsulation/MainKinetik.java`
+Setiap folder minggu berisi:
 
-#### Topik:
+- **Source code** dengan contoh implementasi
+- **README.md** dengan penjelasan detail
+- **Main class** untuk menjalankan program
 
-- Prinsip Enkapsulasi
-- Access Modifiers (private, public)
-- Getter dan Setter Methods
-- Data Hiding
-- Controlled Access to Object State
-- Validasi Data melalui Setter
+Untuk menjalankan program:
 
-#### Tujuan Pembelajaran:
-
-Mahasiswa dapat:
-
-1. Memahami konsep enkapsulasi dan pentingnya data hiding
-2. Menggunakan access modifiers untuk mengontrol akses ke atribut
-3. Membuat getter dan setter methods
-4. Melindungi integritas data object
-5. Menerapkan enkapsulasi dalam desain class yang profesional
-
-#### Konsep Kunci:
-
-```
-- Enkapsulasi: Mekanisme menyembunyikan detail internal class
-- Data Hiding: Membuat atribut private agar tidak bisa diakses langsung
-- Getter Method: Method untuk membaca nilai atribut private
-- Setter Method: Method untuk mengubah nilai atribut private
-- Access Modifiers:
-  * private: Hanya bisa diakses dari dalam class
-  * public: Bisa diakses dari mana saja
-- Single Responsibility: Setiap class memiliki satu tanggung jawab utama
+```bash
+javac NamaFile.java
+java NamaFile
 ```
 
-#### Prinsip Enkapsulasi:
-
-```
-1. Deklarasikan atribut sebagai PRIVATE
-2. Sediakan PUBLIC getter dan setter methods
-3. Validasi data dalam setter sebelum menyimpan
-4. Jaga konsistensi state object
-5. Sembunyikan implementasi internal
-```
-
-#### Contoh 1: Kelas Kinetik (Hitung Energi Kinetik)
-
-Class ini mendemonstrasikan enkapsulasi dengan atribut private dan getter-setter methods:
-
-```java
-public class Kinetik {
-    // Atribut PRIVATE - tidak bisa diakses langsung dari luar
-    double massa, kecepatan;
-    double energiKinetik;
-
-    // GETTER untuk massa
-    public double getMassa() {
-        return massa;
-    }
-
-    // SETTER untuk massa - dengan akses terkontrol
-    public void setMassa(double massa) {
-        this.massa = massa;
-    }
-
-    // GETTER untuk kecepatan
-    public double getKecepatan() {
-        return kecepatan;
-    }
-
-    // SETTER untuk kecepatan
-    public void setKecepatan(double kecepatan) {
-        this.kecepatan = kecepatan;
-    }
-
-    // GETTER untuk energi kinetik
-    public double getEnergiKinetik() {
-        return energiKinetik;
-    }
-
-    // SETTER untuk energi kinetik
-    public void setEnergiKinetik(double energiKinetik) {
-        this.energiKinetik = energiKinetik;
-    }
-
-    // Method untuk menghitung energi kinetik: EK = 0.5 * m * v²
-    public double hitung() {
-        return energiKinetik = 0.5 * this.massa * Math.pow(this.kecepatan, 2);
-    }
-}
-```
-
-**Penjelasan:**
-
-- Atribut `massa`, `kecepatan`, dan `energiKinetik` bersifat private
-- Untuk mengakses dan memodifikasi, harus melalui getter/setter methods
-- Method `hitung()` menghitung energi kinetik dengan rumus fisika: EK = ½ × m × v²
-- Perubahan atribut hanya bisa dilakukan melalui setter yang terkontrol
-
-#### Contoh 2: Kelas Warung (Makanan & Minuman)
-
-Class sederhana yang menerapkan enkapsulasi:
-
-```java
-public class Warung {
-    // Atribut dengan akses terkontrol
-    public String makanan, minuman;
-
-    // GETTER untuk makanan
-    public String getMakanan() {
-        return makanan;
-    }
-
-    // SETTER untuk makanan
-    public void setMakanan(String makanan) {
-        this.makanan = makanan;
-    }
-
-    // GETTER untuk minuman
-    public String getMinuman() {
-        return minuman;
-    }
-
-    // SETTER untuk minuman
-    public void setMinuman(String minuman) {
-        this.minuman = minuman;
-    }
-
-    // Test method
-    public static void main(String[] args) {
-        Warung warung = new Warung();
-        warung.setMakanan("Bakso Beranak");
-        warung.setMinuman("Es Teh Manis");
-        System.out.println(warung.getMakanan() + " dan " + warung.getMinuman());
-        // Output: Bakso Beranak dan Es Teh Manis
-    }
-}
-```
-
-**Penjelasan:**
-
-- Menggunakan setter untuk mengisi data makanan dan minuman
-- Menggunakan getter untuk mengambil data
-- Output menampilkan nilai yang telah diset melalui setter methods
-
-#### Contoh 3: Penggunaan Kelas Kinetik (MainKinetik.java)
-
-Demonstrasi bagaimana menggunakan class yang sudah dienkapsulasi:
-
-```java
-public class MainKinetik {
-
-    public static void main(String[] args) {
-        Kinetik ek = new Kinetik();
-        Scanner sc = new Scanner(System.in);
-
-        // Input massa melalui setter
-        System.out.print("Masukkan massa = ");
-        ek.setMassa(sc.nextDouble());
+---
 
         // Input kecepatan melalui setter
         System.out.print("Masukkan kecepatan = ");
@@ -308,8 +97,10 @@ public class MainKinetik {
         // Hitung dan tampilkan hasil
         System.out.println("Energi Kinetiknya: " + ek.hitung());
     }
+
 }
-```
+
+````
 
 **Penjelasan:**
 
@@ -337,7 +128,7 @@ public class BurukWarung {
     // Kode lain boleh mengubah langsung:
     // buruk.uang = -1000;  // Nilai negatif (tidak logis!)
 }
-```
+````
 
 **✅ Dengan Enkapsulasi (BAIK):**
 
